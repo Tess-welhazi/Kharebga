@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kharbga</title>
+
+    <!-- game rules and stuff here -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="node_modules/skeleton-css/css/skeleton.css">
+  </head>
+  <body>
+
+  <div class="container">
+    <div class="menu">
+      <h1>Kharbga</h1>
+      <h3>How To Play</h3>
+        <ol>
+          <li>Player 1: Create a new game by entering the username</li>
+          <li>Player 2: Enter another username and the room id that is displayed on first window.</li>
+          <li>Click on join game. </li>
+        </ol>
+
+        <h4>Create a new Game</h4>
+        <input type="text" name="name" id="nameNew" placeholder="Enter your name" required>
+        <button id="new">New Game</button>
+        <br><br>
+        <h4>Join an existing game</h4>
+        <input type="text" name="name" id="nameJoin" placeholder="Enter your name" required>
+        <input type="text" name="room" id="room" placeholder="Enter Game ID" required>
+        <button id="join">Join Game</button>
+      </div>
+
+      <!-- board here -->
+      <h2 id="userHello"></h2>
+      <h3 id="turn"></h3>
+      <h3 id="phase"></h3>
+
+      <h2 id="player_x"></h2>
+      <h2 id="player_o"></h2>
+
+      <div class="gameBoard">
+
+          <table class="center">
+            <tr>
+              <td><button class="tile" id="button_00"></button></td>
+              <td><button class="tile" id="button_01"></button></td>
+              <td><button class="tile" id="button_02"></button></td>
+              <td><button class="tile" id="button_03"></button></td>
+              <td><button class="tile" id="button_04"></button></td>
+            </tr>
+            <tr>
+              <td><button class="tile" id="button_10"></button></td>
+              <td><button class="tile" id="button_11"></button></td>
+              <td><button class="tile" id="button_12"></button></td>
+              <td><button class="tile" id="button_13"></button></td>
+              <td><button class="tile" id="button_14"></button></td>
+            </tr>
+            <tr>
+              <td><button class="tile" id="button_20"></button></td>
+              <td><button class="tile" id="button_21"></button></td>
+              <td><button class="tile" id="button_22" disabled></button></td>
+              <td><button class="tile" id="button_23"></button></td>
+              <td><button class="tile" id="button_24"></button></td>
+            </tr>
+            <tr>
+              <td><button class="tile" id="button_30"></button></td>
+              <td><button class="tile" id="button_31"></button></td>
+              <td><button class="tile" id="button_32"></button></td>
+              <td><button class="tile" id="button_33"></button></td>
+              <td><button class="tile" id="button_34"></button></td>
+            </tr>
+            <tr>
+              <td><button class="tile" id="button_40"></button></td>
+              <td><button class="tile" id="button_41"></button></td>
+              <td><button class="tile" id="button_42"></button></td>
+              <td><button class="tile" id="button_43"></button></td>
+              <td><button class="tile" id="button_44"></button></td>
+            </tr>
+
+          </table>
+
+      </div>
+
+
+  </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+
+
+  </body>
+</html>
